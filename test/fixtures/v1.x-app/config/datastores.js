@@ -20,21 +20,20 @@
  */
 
 module.exports.datastores = {
-
     somePostgresqlServer: {
-        user: 'postgres',
-        password: '',
-        database: 'sequelize',
-        dialect: 'postgres',
+        user: "root",
+        password: "root",
+        database: "weo-dev-new",
+        dialect: "mysql",
         options: {
-            dialect: 'postgres',
-            host   : 'localhost',
-            port   : 5432,
-            logging: 'verbose'
-        }
+            dialect: "mysql",
+            host: "localhost",
+            port: 3306,
+            logging: "verbose",
+        },
     },
 
     memory: {
-        adapter: 'sails-memory'
-    }
+        adapter: "sails-memory",
+    },
 };

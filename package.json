@@ -10,9 +10,7 @@
     "lint": "node ./node_modules/.bin/eslint index.js test/*.js test/unit/*.js",
     "lint:fix": "node ./node_modules/.bin/eslint --fix index.js test/*.js test/unit/*.js",
     "test": "node ./node_modules/.bin/mocha --exit test/overall.test.js",
-    "cover": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --exit test/overall.test.js",
-    "pretest": "cd ./test/fixtures/v0.11-app && npm i --prefix ./ && cd - && cd ./test/fixtures/v0.12-app && npm i --prefix ./ && cd -",
-    "posttest": "git checkout -- test/fixtures/v1.x-sqlite3-app/db/sequelize.sqlite && git checkout -- test/fixtures/v1.x-sequelize-waterline-app/db/sequelize.sqlite"
+    "cover": "node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --exit test/overall.test.js"
   },
   "keywords": [
     "sails",
@@ -46,6 +44,8 @@
   },
   "dependencies": {
     "continuation-local-storage": "^3.2.1",
+    "lodash": "^4.17.21",
+    "mysql2": "^2.2.5",
     "sequelize": "^5.21.11"
   },
   "directories": {
